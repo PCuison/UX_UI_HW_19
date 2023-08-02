@@ -130,10 +130,11 @@ p {
 /* Footer section */
 
 .footer {
-    padding: 40px 0;
+    padding: 20px 0;
     background-color: #373738;
     color: #fff;
     margin-top: auto;
+    height: 20vh;
   }
   .footer .social {
     text-align: center;
@@ -183,8 +184,7 @@ p {
     font-size: 13px;
     color: #aaa;
   }
-
-
+  
 
 
 /* Footer 
