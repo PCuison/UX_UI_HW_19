@@ -57,7 +57,7 @@ p {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url(../images/headerimage.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: calc(50vh - 25px);
+  height: calc(100vh - 25px);
   display: flex;
   align-items: center;
   justify-content: center;
