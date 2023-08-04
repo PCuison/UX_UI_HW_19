@@ -1,64 +1,59 @@
 * {
     box-sizing: border-box;
-    
+}
+
+html {
+    font-size: 16px;
+}
+@media (min-width:768px) {
+    font-size: 18px;
+}
+@media (min-width:1024px) {
+    font-size: 19px;
+}
+@media (min-width:1280px) {
+    font-size: 20px;
 }
 
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column; 
-    position: absolute;
-
 }
 
-
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
+@media only screen and (min-width: 768px) {
+padding-bottom: 1.5rem;
+padding-top: .5rem;
 }
 
-.topleft p {
-	color: #111;
+/* Text */
+h1, h2, h3 , h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;	
 }
 
-
-.bottomleft {
-  position: absolute;
-  bottom: 20%;
-  left: 16px;
-  text-align: center;
+p {
+  font-family: 'Montserrat', sans-serif;
 }
 
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 100%;
-}
-
- 
+/* navigation */
 
 .navbar {
     display: flex;
     position: relative;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba (0,0,0,0.5);  
+    background-color: rgba ("0,0,0,1.1");   
 }
 
 .navbar .brand-title {
-    font-size: 1.35rem;
-    margin: 1.0rem;
+    font-size: 1.5rem;
+    margin: 1.5rem;
     padding: 0px 10px;
     font-weight: 400; 
-   
 }
 
 .navbar .brand-title a {
@@ -89,7 +84,6 @@ body {
     list-style: none;
 	padding: 0px;
     margin: .5rem;
-   
 
 }
 
@@ -97,17 +91,17 @@ body {
     display: block;
     text-decoration: none;
     color: white;
-    padding: 0.8rem;
+    padding: 1.5rem;
 }
 
 .navbar-links li:hover {
-    background-color: rgb(0,0,0,0.2);
+    background-color: rgb(0,0,0,0.1);
 }
 
 .toggle-button {
     position: absolute;
-    top: 1.0rem;
-    right: 1.0rem;
+    top: .75rem;
+    right: 1rem;
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -118,7 +112,7 @@ body {
 .toggle-button .bar {
     height: 3px;
     width: 100%;
-    background-color: #373738;
+    background-color: white;
     border-radius: 10px;
 }
 
@@ -126,7 +120,7 @@ body {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
-          background-color: rgba(0,0,0,0.3);
+        background-color: rgba(0,0,0,0.3);
         
     }
 
@@ -160,37 +154,11 @@ body {
     .navbar-links ul li a {
         padding: .5rem 1rem;
         font-weight: 300;
-       
     }
 
     .navbar-links.active {
         display: flex;
     }
-}
-
-
-.topnav {
-  overflow: hidden;
-  background-color: rgba (255,255,255,0.0);
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  border-bottom: 6px solid transparent;
-}
-
-.topnav a:hover {
-  border-bottom: 6px solid #518597;
-}
-
-.topnav a.active {
-  border-bottom: 6px solid #518597;
 }
 
 
@@ -219,6 +187,67 @@ body {
 }
 
 
+.container {
+	padding: 40px 0px;
+	background: #fff;
+	text-align: center;
+}
+
+.container-title {
+  padding: 10px;
+  text-align: center;
+  font-family: 'montserrat';
+  color:#ccc; 
+  font-size: 18px; 
+  font-weight: 300;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("../images/headerimage.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.about-hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("../images/aboutimage.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.contact-hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("../images/contactimage.jpg");
+  height: 30vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.work-hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("../images/workimage.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.solo-travel-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/travelappimage.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
 
 /*hamburger*/
 
@@ -236,7 +265,7 @@ body {
   cursor: pointer;
   transition: all .5s ease-in-out;
   border:none;
-  padding: 10px 0px;
+  padding: 20px 0px;
 
 }
 .menu-btn__burger {
@@ -276,99 +305,7 @@ body {
 }
 
 }
-
-
-.container {
-	text-align: center;
-  	font-family: 'montserrat', sans-serif;
-  	height: 100px; 
-}
-
-
-.container-title {
-  padding: 0px;
-  text-align: center;
-  font-family: 'montserrat';
-  color:#518597; 
-  font-size: 18px; 
-  font-weight: 200;
-}
-
-
-
-.container .btn {
-  position: absolute;
-  transform: translate(-50%, 50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: rgba(0,0,0,0.5);
-  border: none;
-  font-family: "montserrat";
-  color: white;
-  padding: 18px 16px;
-  text-align: center;
-  font-size: 16px;
-  margin: 4px 2px;
- /* opacity: 0.7;*/
-  transition: 0.3s;
-  display: inline-block;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 8px;
-  
-}
-
-.container .btn:hover {
-  background-color: #518597;
-  color: #fff;
  
-}
-
-
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("../images/headerimage.jpg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  color: #fff;
-}
-
-.about-hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("../images/aboutimage.jpg");
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.contact-hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("../images/contactimage.jpg");
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.work-hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("../images/workimage.jpg");
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.solo-travel-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/travelappimage.jpg");
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
 
 
 /* picture effect on hover*/
@@ -386,69 +323,47 @@ body {
 
 /* Header section */
 .header {
-  
+  padding: 40px 10px 40px 10px;
   font-family: 'georgia';
-  font-size: 18px; 
+  color:#fff; 
   
 }
 
 .header-content {
-	padding: 100px;
+	padding: 50px;
 	text-align: center;
- 	position: relative;
- 	
+  	font-weight: 100;
+  	position: relative;
+  	color:#fff;
+  	height: 20vh;
 }
 
-.header-content p {
-	font-size: 44px;
-  font-weight: 400;
-	text-align: center;
- 	position: relative;
-  font-family: 'georgia';
- 	
-}
-
-.header-content h7 {
-  font-family: 'georgia';
-  font-style: italic;
-
-}
-
-/* project title */
 .header-content-project h2 {
 	padding: 100px;
 	text-align: center;
-    font-weight: 400;
-    position: relative;
-    font-size: 38px;
-    color:#fff;
-
+  	font-weight: 400;
+  	position: relative;
+  	font-size: 36px;
+  	color:#fff;
 }
 
-
-.header-content h2 {
-  font-weight: 200;
-  color:#fff;
-  font-family: 'georgia';
-  font-style: italic;
-}
 
 .header-content h3 {
-  font-weight: 100;
-  color:#fff;
-  font-family: 'georgia';
-  font-style: italic;
-  line-height: 24px;
+  text-align: center;
+  font-weight: 400;
+
+ 
 }
 
 .header-content h4 {
   text-align: left;
-  font-weight: 400;
-  color:#fff;
+  font-weight: 100;
 }
 
-.header-content h1 { 
-  font-weight: 500;
+.header-content h1 {
+  font-family: 'georgia';
+  font-size: 3.5rem;
+
   
 }
 
@@ -480,6 +395,9 @@ a:active {
   color: #518597;
 }
 
+div p {
+  font-weight: 300;
+}
 
 img {
   width:100%;
@@ -498,11 +416,11 @@ img {
 }
 
 .text h1 {
-	text-align: center;
+	text-align: left;
 }
   
   
-.button1 {
+.button1  {
     border-radius: 6px;
     color: #fff;
     padding: 16px 32px;
@@ -518,7 +436,7 @@ img {
     border: 1px solid #fff;
   }
   
-  .button1:hover {
+  .button1:hover  {
     background-color: rgb(81,133,151,0.7);
     color: #fff;
      border: 1px solid #fff;
@@ -548,20 +466,28 @@ img {
 
 
   .button3 {
+    border-radius: 6px;
     color: #111;
     padding: 16px 32px;
+    text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     transition-duration: 0.2s;
     cursor: pointer;
-   
+    font-family: 'montserrat';
+    font-weight: 500;
+    background-color: rgb(81,133,151,0.0); 
+    border: 1px solid #fff;
   }
   
   .button3:hover {
+    /*background-color: #518597;*/
     color: #518597;
-
+    font-weight: 700;
+    
+    
   }
 
   
@@ -598,7 +524,7 @@ img {
   background-color: #fff;
   float: left;
   width: 50%;
-  padding: 20px 50px;
+  padding: 20px 20px;
 
 }
 
@@ -614,14 +540,12 @@ img {
   text-align: left;
   margin: 1px 10px;
   padding: 10px 0px;
-  font-weight: 300;
 }
 
-.column-2 h2 {
-  text-align: left;
-  margin: 1px 1px;
+.column-2 h3 {
+  text-align: center;
+  margin: 1px 20px;
   padding: 10px 10px;
-  font-weight: 500;
 }
 
  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other - used in My UX Skills section */
@@ -639,6 +563,16 @@ img {
 
 
 
+/* Fake image */
+.fakeimg {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 8px; 
+  height: auto;
+  padding: 0px;
+  overflow: hidden;
+  height: 360px;
+} 
   
 /* Footer section */
 
@@ -646,8 +580,7 @@ img {
     padding: 40px 0;
     background-color: #373738;
     color: #fff;
-	position: relative;
-   
+    margin-top: auto;
   }
   .footer .social {
     text-align: center;
@@ -675,10 +608,9 @@ img {
     padding: 0;
     list-style: none;
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6;
     margin-bottom: 0;
-    font-weight: 200;
   }
   .footer ul a {
     color: inherit;
@@ -708,7 +640,7 @@ img {
     max-width: 100%;
     margin: 0 auto;
     font: 500 100%/1.5 system-ui;
-    background: #F3F1EE;
+    /*background: #F3F1EE;*/
   }
 
   .projects {
@@ -741,7 +673,7 @@ img {
   }
 
   
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     .aboutme {
       display: block;
       font-size: 80%;
@@ -751,10 +683,6 @@ img {
       margin: -1rem 0 2rem 1rem;
       padding: 1rem;
       background: rgba(white, 0.8);
-    }
-    
-    .image {
-    	display: none;
     }
 
     .projects {
